@@ -1,3 +1,3 @@
 #Custom Component
 
-[Demo](http://anujsharma-bbd.github.io/custom-component-my-resume/)
+[Demo](https://anujsharma-bbd.github.io/custom-component-my-resume/)
