@@ -1,7 +1,7 @@
 import { LitElement, html } from '@polymer/lit-element';
 class MyResume extends LitElement {
     static get properties() {
-        return {
+        return { 
             url: {
                 type: String,
                 hasChanged(newVal, oldVal) {
