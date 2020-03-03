@@ -1,28 +1,29 @@
 import { LitElement, html } from '@polymer/lit-element';
 class MyResume extends LitElement {
     static get properties() {
-        return { 
+        return {
             url: {
                 type: String,
                 hasChanged(newVal, oldVal) {
                     return newVal !== oldVal;
                 }
             },
-            data: { type: Object },
-            json: { type: Object },
-            isLoading: { type: Boolean },
-            isError: { type: Boolean },
+            data: { type: Object, attribute: false },
+            json: { type: Object, attribute: false },
+            isLoading: { type: Boolean, attribute: false },
+            isError: { type: Boolean, attribute: false },
         };
     }
     constructor() {
-        super(); 
+        super();
         this.isLoading = false;
         this.isError = false;
     }
     attributeChangedCallback(name, oldValue, newValue) {
         super.attributeChangedCallback(name, oldValue, newValue);
         if (name === 'url' && newValue && newValue !== oldValue) {
-            this.loadResume(newValue);
+           this.loadResume(newValue);
+            this.url = newValue;
         }
     }
     loadResume(url) {
@@ -97,7 +98,6 @@ class MyResume extends LitElement {
 
     }
     render() {
-        console.log(this.url);
         return html`
             <style>
             .resume-container{
