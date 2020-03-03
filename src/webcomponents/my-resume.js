@@ -22,7 +22,7 @@ class MyResume extends LitElement {
     attributeChangedCallback(name, oldValue, newValue) {
         super.attributeChangedCallback(name, oldValue, newValue);
         if (name === 'url' && newValue && newValue !== oldValue) {
-           this.loadResume(newValue);
+            this.loadResume(newValue);
             this.url = newValue;
         }
     }
@@ -73,8 +73,8 @@ class MyResume extends LitElement {
                         <hr/>
                         <div class='list-items'>
                         ${
-                    data.map(p => {
-                        return this.getFullCollection(p)
+                    data.map((p, index) => {
+                        return html`<div class='list-item'>${this.getFullCollection(p)} <hr/></div>`;
                     })
                     }
                         </div>
@@ -139,14 +139,24 @@ class MyResume extends LitElement {
                 display: inline-block;
                 width: 100%;
                 margin-bottom: 10px;
+                counter-reset: listcounter;
              }
+             .list-item::before {
+                counter-increment: listcounter;
+                content: counter(listcounter) ": ";
+                float: left;
+                height: 110px;
+                margin-right: 10px;
+                font-weight: bold;
+                font-size: 15px;
+              }
              .object-items{
                  padding-left:50px;
              }
              .item{
-                 margin-bottom:10px;
-                 float: left;
-                width: 50%;
+                margin-bottom:10px;
+                float: left;
+                width: 48%;
              }
             </style>
             <div>${ this.isLoading ?
