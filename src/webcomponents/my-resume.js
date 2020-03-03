@@ -15,7 +15,7 @@ class MyResume extends LitElement {
         };
     }
     constructor() {
-        super();
+        super(); 
         this.isLoading = false;
         this.isError = false;
     }
