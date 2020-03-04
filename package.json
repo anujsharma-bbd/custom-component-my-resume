@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "json-resume": "^1.0.1",
     "lit-element": "^2.2.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

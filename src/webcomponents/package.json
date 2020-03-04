@@ -1,6 +1,6 @@
 {
   "name": "json-resume",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "takes a url as param and renders that json on screen",
   "main": "my-resume.js",
   "scripts": {
@@ -16,6 +16,5 @@
   ],
   "author": "Anuj Sharma",
   "license": "ISC",
-  "dependencies": {
-  }
+  "dependencies": {}
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import './webcomponents/my-resume';
+import "json-resume";
 class App extends React.Component {
   constructor(props) {
     super(props);
